@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day-11 | Play with FlexBox</title>
+
+    <style>
+         .parent-container {
+            height: 400px;
+            width: 600px;
+            background-color: #05265c;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            margin-bottom: 50px;
+         }
+
+         .child {
+            height: 100px;
+            width: 150px;
+            background-color: yellow;
+            border-radius: 10px;
+            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+         .site-container {
+            height: 500px;
+            width: 600px;
+            background-color: #FFAFB2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 50px;
+         }
+
+         .header, .footer {
+            height: 70px;
+            width: 100%;
+            background-color: #96D1C6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+
+        .main {
+            width: 100%;
+            display:flex;
+            gap: 20px;
+        }
+
+        .aside {
+            width: 40%;
+            height: 320px;
+            background-color: #5EB7B6;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .article {
+            width: 60%;
+            height: 320px;
+            background-color: #FD7978;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: flex-end;
+        }
+
+        .image {
+            height: 100px;
+            width: 100px;
+            background-color: #D5D5D5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .flex-wrapper {
+            height: 500px;
+            width: 600px;
+            display: flex; 
+            background-color: beige;
+            padding: 20px;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .one, .four {
+            height: 70px;
+            width: 100%;
+            background-color: #5EB7B6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .two {
+            height: 70px;
+            width: 100%;
+            background-color: green;
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .three {
+            width: 100%;
+            display:flex;
+            gap: 5px;
+        }
+
+        .aside1 {
+            width: 30%;
+            height: 320px;
+            background-color: #e4e294;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .aside2 {
+            width: 70%;
+            height: 320px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+        .content {
+            height: 180px;
+            background-color: rgba(18, 81, 169, 0.9);
+        }
+
+        .section {
+            height: 180px;
+            background-color: #2124b1;
+        }
+
+        .flex-wrapper1{
+            height: 400px;
+            width: 600px;
+            display: flex; 
+            background-color: rgb(230, 239, 174);
+            padding: 20px;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .row1 {
+            height:100px;
+            width: 100%;
+            gap: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image1 {
+            width: 100px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image2 {
+            width: 400px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image3 {
+            width: 100px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+
+        .row2 {
+            height:100px;
+            width: 100%;
+            gap: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image4 {
+            width: 400px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image5 {
+            width: 50px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image6 {
+            width: 150px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .row3 {
+            height:100px;
+            width: 100%;
+            gap: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image7 {
+            width: 50px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image8 {
+            width: 150px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image9 {
+            width: 400px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .row4 {
+            height:100px;
+            width: 100%;
+            gap: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image10 {
+            width: 170px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image11 {
+            width: 45px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image12 {
+            width: 170px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image13 {
+            width: 45px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+
+        .image14 {
+            width: 170px;
+            height: 100px;
+            background-color: #76cd12;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Day-11 | Play with FlexBox</h1>
+
+    <div class="parent-container">
+        <div class="child">1</div>
+        <div class="child">2</div> 
+        <div class="child">3</div> 
+        <div class="child">4</div> 
+        <div class="child">5</div> 
+        <div class="child">6</div>     
+    </div>
+
+    <div class="site-container">
+        <div class="header">Header</div>
+        <div class="main">
+            <div class="aside">Aside</div>
+            <div class="article">
+                <div class="image">Image</div>
+                <div class="image">Image</div>
+                <div class="image">Image</div>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+
+    <div class="flex-wrapper">
+        <div class="one">Header</div>
+        <div class="two">Navigation</div>
+        <div class="three">
+            <div class="aside1"></div>
+            <div class="aside2">
+                <div class="content"></div>
+                <div class="section"></div>
+            </div>
+        </div>  
+        <div class="four">Footer</div>
+      </div>
+
+      <div class="flex-wrapper1">
+        <div class="row1">
+            <div class="image1"></div>
+            <div class="image2"></div>
+            <div class="image3"></div>
+        </div>
+        <div class="row2">
+            <div class="image4"></div>
+            <div class="image5"></div>
+            <div class="image6"></div>
+        </div>
+        <div class="row3">
+            <div class="image7"></div>
+            <div class="image8"></div>
+            <div class="image9"></div>
+        </div>
+        <div class="row4">
+            <div class="image10"></div>
+            <div class="image11"></div>
+            <div class="image12"></div>
+            <div class="image13"></div>
+            <div class="image14"></div>
+        </div>
+      </div>
+</body>
+</html>
